@@ -116,7 +116,7 @@ public class MaxPriorityQueue<Key> implements Iterable<Key> {
 		
 		public HeapIterator() {
 			copy = new MaxPriorityQueue<>(size());
-			for(int i = 0; i <= n; i++) {
+			for(int i = 1; i <= n; i++) {
 				copy.insert(pq[i]);
 			}
 		}
