@@ -51,7 +51,13 @@ public class IndexMaxPriorityQueue<Key extends Comparable<Key>> implements Itera
 	}
 	
 	public void delete(int i) {
-		
+		if(!contains(i))
+			throw new NoSuchElementException();
+		int index = qp[i];
+		swap(index, n--);
+		sink(index);
+		keys[i] = null;
+		qp[i] = -1;
 	}
 	
 	public void decreaseKey(int i, Key key) {
