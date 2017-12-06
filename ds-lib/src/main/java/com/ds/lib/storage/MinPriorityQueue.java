@@ -115,7 +115,7 @@ public class MinPriorityQueue<Key> implements Iterable<Key> {
 		
 		public MinPriorityQueueIterator() {
 			copy = new MinPriorityQueue<>(size());
-			for(int i = 0; i <= n; i++)
+			for(int i = 1; i <= n; i++)
 				copy.insert(pq[i]);
 		}
 
